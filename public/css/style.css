@@ -1,0 +1,72 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+
+}
+.top-menu {
+    height: 60px;
+    background: red;
+}
+
+.top-menu > .title {
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+}
+
+i.icon {
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    padding: 15px;
+    background: yellow;
+    top: 0px;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+}
+
+i.icon.right {
+    right: 0px;
+}
+
+.viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.song-container {
+    margin: 0px;
+    padding: 20px;
+}
+
+.song {
+    list-style: none;
+    width: 100%;
+}
+
+.song a {
+    display: block;
+    height: 40px;
+    padding: 5px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    background: yellow;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pure-form {
+    padding: 20px;
+}
+
+.search-q {
+    width: 100%;
+}
+
+label {
+    width: 50%;
+}

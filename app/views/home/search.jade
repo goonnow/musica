@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    form(class="pure-form",action="/search")
+        input(type="text",class="search-q",placeholder="Hey, dude!",name="q",value="")
+        label()
+            input(type="radio",value="eng",name="lang",checked)
+            | International
+        label(class="pure-radio")
+            input(type="radio",value="thai",name="lang")
+            | Thai
+    if results
+        ul(class="song-container")
+            each song in results
+                li(class="song")
+                    a(href="/view/#{i}") #{song.name}

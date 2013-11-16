@@ -1,0 +1,22 @@
+doctype 5
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    title= title
+    block css
+      link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.3.0/pure-min.css')
+      link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css')
+      link(rel='stylesheet', href='/css/style.css')
+    block js
+      script(src='http://localhost:35729/livereload.js')
+  body
+    div(class="top-menu")
+        if leftIcon
+            a(href="/")
+                i(class="icon left fa fa-angle-left")
+        div(class="title")= pageTitle
+        if rightIcon
+            a(href="/search")
+                i(class="icon right fa fa-search")
+    block content

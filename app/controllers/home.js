@@ -20,16 +20,12 @@ var songs = [
 ];
 
 exports.index = function(req, res){
-  Article.find(function(err, articles){
-    if(err) throw new Error(err);
     res.render('home/index', {
       title: 'Home',
       pageTitle: 'musica',
-      articles: articles,
       rightIcon: 'ac',
       songs: songs
     });
-  });
 };
 
 exports.view = function(req, res){
@@ -54,4 +50,13 @@ exports.search = function(req, res){
           results: results
         });
     });
+};
+
+exports.add = function(req, res){
+    songs.push({
+        name:req.query.title,
+        url: req.query.url
+    });
+
+    res.redirect('/');
 };

@@ -7,4 +7,4 @@ block content
         ul(class="song-container")
             each song in results
                 li(class="song")
-                    a(href="/view/#{i}") #{song.title}
+                    a(href="/add?title=#{song.title}&url=#{song.url}") #{song.title}

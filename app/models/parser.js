@@ -1,26 +1,14 @@
 
 exports.parse = function(data) {
     var song = {
-        url: data.link,
-        title: data.title
+        url: data.link
     };
 
-    //if( data.link.match(/chordtabs/) ) {
-        //var nameAndArtist = data.title.replace(/คอร์ด คอร์ดเพลง คอร์ดกีต้าร์ เนื้อเพลง /g,'');
-        //var splited = nameAndArtist.split('|');
-
-        //song.name = splited[0];
-        //song.name = song.name.trim();
-
-        //song.artist = splited[1].replace('...','');
-        //song.artist = song.artist.split(':')[0].trim();
-    //} else if( data.link.match(/e-chords/) ){
-        //var splited = data.title.split(' chords by ');
-
-        //song.name = splited[0].trim();
-
-        //song.artist = splited[1].trim();
-    //}
+    if( data.link.match(/chordtabs/) ) {
+        song.title = data.title.replace(/คอร์ด คอร์ดเพลง คอร์ดกีต้าร์ เนื้อเพลง /g,'');
+    } else if( data.link.match(/e-chords/) ){
+        song.title= data.title;
+    }
 
 
     return song;

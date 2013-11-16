@@ -1,5 +1,4 @@
-var mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+var musica = require('../models/musica');
 
 var songs = [
     {
@@ -44,10 +43,15 @@ exports.view = function(req, res){
 };
 
 exports.search = function(req, res){
-    res.render('home/search', {
-      title: 'Search',
-      pageTitle: 'search',
-      leftIcon: true,
-      results: songs
+    var q = req.query.q || '';
+
+    musica.search( q, function(results){
+        res.render('home/search', {
+          title: 'Search',
+          pageTitle: 'search',
+          leftIcon: true,
+          prevQuery: q,
+          results: results
+        });
     });
 };

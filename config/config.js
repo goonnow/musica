@@ -9,7 +9,11 @@ var config = {
       name: 'musica-simple'
     },
     port: 3000,
-    db: 'mongodb://localhost/musica-simple-development'
+    db: 'mongodb://localhost/musica-simple-development',
+    search: {
+        key: 'key',
+        cx: 'cse-key'
+    }
   },
 
   test: {
@@ -27,7 +31,11 @@ var config = {
       name: 'musica-simple'
     },
     port: 3000,
-    db: 'mongodb://localhost/musica-simple-production'
+    db: 'mongodb://localhost/musica-simple-production',
+    search: {
+        key: 'key',
+        cx: 'cse-key'
+    }
   }
 };
 

@@ -1,23 +1,6 @@
 var musica = require('../models/musica');
+var store = require("memory-store")
 
-var songs = [
-    {
-        name: 'Yellow',
-        url: 'http://www.e-chords.com/chords/coldplay/yellow'
-    },
-    {
-        name: 'Yellow 2',
-        url: 'http://www.e-chords.com/chords/coldplay/yellow'
-    },
-    {
-        name: 'Yellow 3',
-        url: 'http://www.e-chords.com/chords/coldplay/yellow'
-    },
-    {
-        name: 'Yellow 4',
-        url: 'http://www.e-chords.com/chords/coldplay/yellow'
-    }
-];
 
 exports.index = function(req, res){
     res.render('home/index', {

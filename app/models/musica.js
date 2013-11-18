@@ -21,14 +21,18 @@ exports.search = function( q, callback ) {
     ];
 
     request( API+q, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            var items = JSON.parse(body).items;
+        console.log(body);
+        var json = JSON.parse(body);
+        if (!error && response.statusCode == 200 && json.items) {
+
+            var items = json.items;
             var res =[];
 
             for( var i = 0; i < items.length; i++ ) {
                 var song = parser.parse(items[i]);
                 res.push(song);
             }
+
             callback(res);
         }
     })

@@ -1,5 +1,4 @@
 var musica = require('../models/musica');
-var store = require("memory-store")
 
 
 exports.index = function(req, res){

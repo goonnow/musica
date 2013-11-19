@@ -4,9 +4,16 @@ html, body {
     padding: 0px;
 
 }
+
+body {
+    background: #000000 url('http://robohash.org/static/img/page_bground.jpg') bottom;
+}
+
 .top-menu {
     height: 60px;
-    background: red;
+    background: #131212;
+    color: white;
+    /*background: red;*/
 }
 
 .top-menu > .title {
@@ -22,11 +29,11 @@ i.icon {
     height: 30px;
     width: 30px;
     padding: 15px;
-    background: yellow;
+    background: #494949;
     top: 0px;
     font-size: 30px;
     text-align: center;
-    color: black;
+    color: white;
 }
 
 i.icon.right {
@@ -54,19 +61,30 @@ i.icon.right {
     padding: 5px;
     line-height: 40px;
     margin-bottom: 10px;
-    background: yellow;
+    background: #F2F2F2;
     text-align: center;
     text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .pure-form {
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
 }
 
 .search-q {
     width: 100%;
+    padding: 10px !important;
+    font-size: 18px !important;
 }
 
 label {
     width: 50%;
+}
+
+.disco-icon {
+    height: 18px;
+    vertical-align: middle;
 }
